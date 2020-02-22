@@ -1,0 +1,98 @@
+html {
+    font-family: 'Shadows Into Light';
+    color:black; 
+    font-weight: 500;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    margin: 30px;
+    display: grid;
+    grid-gap: 30px; 
+    grid-template: "a a" 150px
+                   "a a" 150px
+                   "b c" 150px
+                   "d e" 150px
+                   "f g" 150px
+                   "h i" 150px
+                   "j ." 150px;
+}
+
+@media screen and (min-width:768px){
+    .container{
+        grid-template: "a a b" 150px
+                       "a a c" 150px
+                       "d e f" 150px
+                       "g h i" 150px
+                       "j . ." 150px;
+                    
+    }
+}
+
+@media screen and (min-width: 991px){
+    .container{
+        grid-template: "a a b c" 150px
+                       "a a d e" 150px
+                       "f g h i" 150px
+                       "j . . ." 150px; 
+                    
+    }
+}
+
+.par {
+
+    background-image: radial-gradient(#ffffff, #e5e5e2);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 5px 5px 10px  rgba(84,84,64,0.25);
+}
+
+.impar {
+
+    background-image: radial-gradient(#ffffff, #e5e5e2);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 5px 5px 10px  rgba(84,84,64,0.25);
+}
+
+
+.a {
+    grid-area: a;
+   
+}
+
+.icon {
+    color:#ff0000;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+ 
+.impar:hover {
+    transform: rotate(20deg);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+}
+
+.par:hover {
+    transform: rotate(-20deg);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+} 
